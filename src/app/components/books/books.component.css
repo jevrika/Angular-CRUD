@@ -1,0 +1,77 @@
+.container{
+  display:grid;
+  flex-direction: column;
+  gap:15px;
+  grid-template-columns:repeat( auto-fill, minmax(300px, 1fr) );
+}
+
+.wrapper{
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  flex-direction: column;
+  border: 1px solid rgb(143, 143, 143);
+  border-radius: 10px;
+  padding:15px;
+  gap:10px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.textWrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap:10px;
+
+}
+
+.heading{
+  text-wrap: wrap;
+  font-size: 1.5rem;
+}
+
+.image{
+  object-fit: cover;
+  height: 100%;
+  max-height: 225px;
+  max-width:150px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.genreImage{
+  width: 35px;
+  border: 1px solid #cfe2f3;
+  padding: 5px;
+  border-radius: 50%;
+  background-color:	#cfe2f3;
+}
+
+.genreWrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+}
+
+.deleteIcon{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  color:#fa7c7c;
+  cursor: pointer;
+}
+
+.deleteIcon:hover {
+  color:#fa4242;
+}
+
+.link{
+  text-decoration: none;
+  color:black
+}

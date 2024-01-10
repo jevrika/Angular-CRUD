@@ -1,0 +1,36 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81Fyh2mrw4L._AC_UF1000,1000_QL80_.jpg",
+      "title": "Potter and the Philosopher's Stone",
+      "author": "J.K.Rowling",
+      "genre": "fantasy",
+      "publishing_year": 1997
+    },
+    {
+      "id": 2,
+      "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg",
+      "title": "Atomic Habits test",
+      "author": "James Clear",
+      "genre": "Psychology",
+      "publishing_year": 2018
+    },
+    {
+      "id": 3,
+      "image": "https://readwatchdrinkcoffee.files.wordpress.com/2020/09/death-on-the-nile.jpg",
+      "title": "Death on the Nile",
+      "author": "Agatha Christie",
+      "genre": "Mystery",
+      "publishing_year": 1969
+    },
+    {
+      "id": 4,
+      "image": "https://m.media-amazon.com/images/I/51Zu0ZwT0jL._SY445_SX342_.jpg",
+      "title": "It Ends with Us",
+      "author": "Colleen Hoover",
+      "genre": "Romance",
+      "publishing_year": 2016
+    }
+  ]
+}

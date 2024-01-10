@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <img class="logo" src="../../../assets/logo.png" alt="app logo" />
+  <app-button
+    [class]="showAddBookForm ? 'buttonToCloseForm' : 'buttonToOpenForm'"
+    text="{{showAddBookForm ? 'Close Form' : 'Open Form'}}"
+    (btnClick)="openForm()"
+  ></app-button>
+</div>

@@ -1,0 +1,62 @@
+<div *ngIf="showAddBookForm" class="wrapper">
+  <form  (ngSubmit)="onSubmit()" class="form">
+    <label for="image"> Book cover image</label>
+    <input
+      class="input"
+      type="text"
+      name="image"
+      [(ngModel)]="image"
+      id="image"
+      placeholder="book cover image..."
+      required
+    />
+
+    <label for="title"> Book title </label>
+    <input
+      class="input"
+      type="text"
+      name="title"
+      [(ngModel)]="title"
+      id="title"
+      placeholder="book title..."
+      required
+    />
+
+    <label for="author"> Book author</label>
+    <input
+      class="input"
+      type="text"
+      name="author"
+      [(ngModel)]="author"
+      id="author"
+      placeholder="book author..."
+      required
+    />
+
+    <label for="genre"> Book genre </label>
+    <select required class="input" name="genre" [(ngModel)]="genre" id="genre">
+      <option value="">Choose genre</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="history">History</option>
+      <option value="horror">Horror</option>
+      <option value="mystery">Mystery</option>
+      <option value="psychology">Psychology</option>
+      <option value="romance">Romance</option>
+    </select>
+
+    <label for="publishing_year"> Book publishing year </label>
+    <input
+      class="input"
+      type="number"
+      min="1700"
+      max="2099"
+      step="1"
+      value="2000"
+      name="publishing_year"
+      id="publishing_year"
+      [(ngModel)]="publishing_year"
+      required
+    />
+    <app-button [class]="buttonClass" text="Add book"></app-button>
+  </form>
+</div>

@@ -1,0 +1,48 @@
+<!-- <h2>My Books</h2>
+<ul class="books">
+  <li *ngFor="let book of books">
+    <a routerLink="/books/{{book.id}}">
+      <span class="badge">{{book.id}}</span> {{book.title}}
+    </a>
+    <button type="button" class="delete" title="delete book"
+  (click)="delete(book)">delete</button>
+  </li>
+</ul>
+ -->
+
+<!-- <div>
+  <label for="new-book">Book name: </label>
+  <input id="new-book" #bookTitle />
+
+  <button
+    type="button"
+    class="add-button"
+    (click)="add(bookTitle.value); bookTitle.value = ''"
+  >
+    Add book
+  </button>
+</div> -->
+<app-add-book-form (onAddBook)="addBook($event)"></app-add-book-form>
+<div class="container">
+  <div class="wrapper" *ngFor="let book of books">
+    <img class="image" src="{{ book.image }}" />
+    <div class="textWrapper">
+      <h3 class="heading">{{ book.title }}</h3>
+      <fa-icon
+        class="deleteIcon"
+        [icon]="deleteIcon"
+        (click)="deleteBook(book)"
+      ></fa-icon>
+      <p>{{ book.author }}</p>
+      <div class="genreWrapper">
+        <img
+          class="genreImage"
+          src="../../../assets/{{ book.genre.toLowerCase() }}.png"
+        />
+        <p>{{ book.genre }}</p>
+      </div>
+      <p>{{ book.publishing_year }}</p>
+      <a class="link" routerLink="/books/{{ book.id }}"> Show more → </a>
+    </div>
+  </div>
+</div>
