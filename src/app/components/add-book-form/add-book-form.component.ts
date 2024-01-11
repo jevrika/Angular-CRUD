@@ -68,6 +68,7 @@ export class AddBookFormComponent {
     this.title = '';
     this.image = '';
     this.author = '';
+    this.description = '';
     this.genre = '';
     this.publishing_year = '';
   }

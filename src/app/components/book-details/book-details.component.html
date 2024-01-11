@@ -8,6 +8,12 @@
 
   <div class="imageWrapper">
     <img class="image" src="{{ book.image }}" />
+    <div class="genreWrapper">
+      <div class="genreImageWrapper">
+        <img class="genreImage" src="../../../assets/{{ book.genre.toLowerCase() }}.png"/>
+      </div>
+      <p class="genreText">{{ book.genre }}</p>
+    </div>
   </div>
 
   <div class="textWrapper">
@@ -15,12 +21,8 @@
     <p class="author">{{ book.author }}</p>
     <p class="description">{{ book.description }}</p>
 
-    <div class="genreWrapper">
-      <img class="genreImage" src="../../../assets/{{ book.genre.toLowerCase() }}.png"/>
-      <p class="genreText">{{ book.genre }}</p>
-    </div>
 
-    <p class="publishingYear">Publishing year: {{ book.publishing_year }}</p>
+    <p class="publishingYear">Publishing year: <b>{{ book.publishing_year }}</b></p>
   </div>
 
 </div>
@@ -33,6 +35,11 @@
   <div class="form">
 
     <div class="inputWrapper">
+      <label for="image">Book image: </label>
+      <input class="input" id="image" [(ngModel)]="book.image" placeholder="image" />
+    </div>
+
+    <div class="inputWrapper">
       <label for="title">Book title: </label>
       <input class="input" id="title" [(ngModel)]="book.title" placeholder="title" />
     </div>
@@ -40,6 +47,11 @@
     <div class="inputWrapper">
       <label for="author">Book author: </label>
       <input class="input" id="author" [(ngModel)]="book.author" placeholder="author"/>
+    </div>
+
+    <div class="inputWrapper">
+      <label for="description">Book description: </label>
+      <input class="input" id="description" [(ngModel)]="book.description" placeholder="description"/>
     </div>
 
     <div class="inputWrapper">

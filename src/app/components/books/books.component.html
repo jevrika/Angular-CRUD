@@ -1,16 +1,18 @@
 <app-header></app-header>
 <app-add-book-form (onAddBook)="addBook($event)"></app-add-book-form>
 <div class="container">
-  <div class="wrapper" *ngFor="let book of books">
-    <img class="image" src="{{ book.image }}" />
+  <div class="wrapper" *ngFor="let book of books.reverse()">
+    <div class="imageWrapper">
+      <img class="image" src="{{ book.image }}" />
+    </div>
     <div class="textWrapper">
       <h3 class="heading">{{ book.title }}</h3>
-      <fa-icon
+      <fa-icon size="2x"
         class="deleteIcon"
         [icon]="deleteIcon"
         (click)="deleteBook(book)"
       ></fa-icon>
-      <p>{{ book.author }}</p>
+      <p class="author">{{ book.author }}</p>
       <div class="genreWrapper">
         <img
           class="genreImage"

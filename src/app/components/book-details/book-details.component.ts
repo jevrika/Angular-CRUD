@@ -21,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 export class BookDetailsComponent {
   @Input() book!: Book;
 
+
   buttonClass = 'saveButton';
 
   editIcon = faPenToSquare;
