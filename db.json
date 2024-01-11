@@ -3,16 +3,18 @@
     {
       "id": 1,
       "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81Fyh2mrw4L._AC_UF1000,1000_QL80_.jpg",
-      "title": "Potter and the Philosopher's Stone",
+      "title": "Potter and the Philosopher's Stone test",
       "author": "J.K.Rowling",
-      "genre": "fantasy",
+      "description": "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
+      "genre": "Fantasy",
       "publishing_year": 1997
     },
     {
       "id": 2,
       "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/81YkqyaFVEL._AC_UF1000,1000_QL80_.jpg",
-      "title": "Atomic Habits test",
+      "title": "Atomic Habits",
       "author": "James Clear",
+      "description": "No matter your goals, Atomic Habits offers a proven framework for improving—every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits, break bad ones, and master the tiny behaviors that lead to remarkable results.If you're having trouble changing your habits, the problem isn't you. The problem is your system. Bad habits repeat themselves again and again not because you don't want to change, but because you have the wrong system for change. You do not rise to the level of your goals. You fall to the level of your systems. Here, you'll get a proven system that can take you to new heights.Clear is known for his ability to distill complex topics into simple behaviors that can be easily applied to daily life and work. Here, he draws on the most proven ideas from biology, psychology, and neuroscience to create an easy-to-understand guide for making good habits inevitable and bad habits impossible. Along the way, readers will be inspired and entertained with true stories from Olympic gold medalists, award-winning artists, business leaders, life-saving physicians, and star comedians who have used the science of small habits to master their craft and vault to the top of their field.",
       "genre": "Psychology",
       "publishing_year": 2018
     },
@@ -21,6 +23,7 @@
       "image": "https://readwatchdrinkcoffee.files.wordpress.com/2020/09/death-on-the-nile.jpg",
       "title": "Death on the Nile",
       "author": "Agatha Christie",
+      "description": "The tranquility of a lovely cruise along the Nile is shattered by the discovery that Linnet Ridgeway has been shot. She was young, stylish and beautiful, a girl who had everything – until she lost her life.Who is also on board? Christie's great detective Hercule Poirot is on holiday. He recalls an earlier outburst by a fellow passenger: ‘I’d like to put my dear little pistol against her head and just press the trigger.’ Despite the exotic setting, nothing is ever quite what it seems…",
       "genre": "Mystery",
       "publishing_year": 1969
     },
@@ -29,8 +32,18 @@
       "image": "https://m.media-amazon.com/images/I/51Zu0ZwT0jL._SY445_SX342_.jpg",
       "title": "It Ends with Us",
       "author": "Colleen Hoover",
+      "description": "Lily hasn’t always had it easy, but that’s never stopped her from working hard for the life she wants. She’s come a long way from the small town in Maine where she grew up — she graduated from college, moved to Boston, and started her own business. So when she feels a spark with a gorgeous neurosurgeon named Ryle Kincaid, everything in Lily’s life suddenly seems almost too good to be true.",
       "genre": "Romance",
       "publishing_year": 2016
+    },
+    {
+      "title": "test",
+      "image": "https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "author": "test",
+      "description": "testsetsetsetstst",
+      "genre": "horror",
+      "publishing_year": 1703,
+      "id": 5
     }
   ]
 }

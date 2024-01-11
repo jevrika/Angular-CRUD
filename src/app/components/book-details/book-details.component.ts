@@ -5,22 +5,40 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { BookService } from '../../services/book.service';
+import { ButtonComponent } from '../button/button.component';
+import { Subscription } from 'rxjs';
+import { UiService } from '../../services/ui.service';
+import { faPenToSquare, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-book-details',
   standalone: true,
-  imports: [FormsModule, NgIf],
+  imports: [FormsModule, NgIf, ButtonComponent, FontAwesomeModule],
   templateUrl: './book-details.component.html',
   styleUrl: './book-details.component.css',
 })
 export class BookDetailsComponent {
   @Input() book!: Book;
 
+  buttonClass = 'saveButton';
+
+  editIcon = faPenToSquare;
+  exitIcon = faXmark;
+
+  showEditBookForm!: boolean;
+  subsricption!: Subscription;
+
   constructor(
     private route: ActivatedRoute,
-    private heroService: BookService,
-    private location: Location
-  ) {}
+    private bookService: BookService,
+    private location: Location,
+    private uiService: UiService
+  ) {
+    this.subsricption = this.uiService
+      .onToggle()
+      .subscribe((value) => (this.showEditBookForm = value));
+  }
 
   ngOnInit(): void {
     this.getBook();
@@ -28,7 +46,7 @@ export class BookDetailsComponent {
 
   getBook(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.heroService.getBook(id).subscribe((book) => (this.book = book));
+    this.bookService.getBook(id).subscribe((book) => (this.book = book));
   }
   goBack(): void {
     this.location.back();
@@ -36,9 +54,11 @@ export class BookDetailsComponent {
 
   save(): void {
     if (this.book) {
-      this.heroService.updateBook(this.book)
-        .subscribe(() => this.goBack());
+      this.bookService.updateBook(this.book).subscribe(() => this.goBack());
     }
   }
 
+  toggleEditBookForm() {
+    this.uiService.toggleEditBookForm();
+  }
 }

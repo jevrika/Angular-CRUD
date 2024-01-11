@@ -1,5 +1,5 @@
 <div *ngIf="showAddBookForm" class="wrapper">
-  <form  (ngSubmit)="onSubmit()" class="form">
+  <form (ngSubmit)="onSubmit()" class="form">
     <label for="image"> Book cover image</label>
     <input
       class="input"
@@ -30,6 +30,17 @@
       [(ngModel)]="author"
       id="author"
       placeholder="book author..."
+      required
+    />
+
+    <label for="description"> Book description</label>
+    <input
+      class="input"
+      type="text"
+      name="description"
+      [(ngModel)]="description"
+      id="description"
+      placeholder="book description..."
       required
     />
 

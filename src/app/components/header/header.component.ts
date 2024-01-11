@@ -11,18 +11,20 @@ import { Subscription } from 'rxjs';
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+
   buttonClassToOpen = 'buttonToOpenForm';
   buttonClassToClose = 'buttonToCloseForm';
-  showAddBookForm!: boolean;
+
+  showAddBookForm!: boolean; //true or false
   subscruption!: Subscription;
 
   constructor(private uiService: UiService) {
     this.subscruption = this.uiService
       .onToggle()
-      .subscribe((value) => (this.showAddBookForm = value));
+      .subscribe((value) => (this.showAddBookForm = value)); // sets the new value
   }
 
   openForm() {
-    this.uiService.toggleAddBookForm()
+    this.uiService.toggleAddBookForm();
   }
 }

@@ -1,6 +1,5 @@
-
-.buttonToOpenForm{
-  padding:10px 25px;
+.buttonToOpenForm {
+  padding: 10px 25px;
   border-radius: 10px;
   border: 1px solid #ffffff;
   background-color: #ffffff;
@@ -9,10 +8,10 @@
 
 .buttonToOpenForm:hover {
   opacity: 0.7;
-} 
+}
 
-.formButton{
-  padding:10px 25px;
+.formButton {
+  padding: 10px 25px;
   border-radius: 10px;
   border: 1px solid #d3fdd3;
   background-color: #d3fdd3;
@@ -22,10 +21,10 @@
 
 .formButton:hover {
   background-color: #a8ffa8;
-} 
+}
 
-.buttonToCloseForm{
-  padding:10px 25px;
+.buttonToCloseForm {
+  padding: 10px 25px;
   border-radius: 10px;
   border: 1px solid #ff9f9f;
   background-color: #ff9595;
@@ -33,5 +32,18 @@
 }
 
 .buttonToCloseForm:hover {
+  opacity: 0.7;
+}
+
+.saveButton {
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 1px solid #ebffc7;
+  background-color: #e2fcb1;
+  cursor: pointer;
+  width: 100%;
+}
+
+.saveButton:hover {
   opacity: 0.7;
 }

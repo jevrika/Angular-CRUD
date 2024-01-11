@@ -1,4 +1,6 @@
-.container{
-  padding:25px;
+.container {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-

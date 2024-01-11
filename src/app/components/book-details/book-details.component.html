@@ -1,50 +1,68 @@
 <div class="wrapper" *ngIf="book">
-  <img class="image" src="{{ book.image }}" />
-  <h2>{{ book.title }}</h2>
-  <p>{{ book.author }}</p>
-  <div class="genreWrapper">
-    <img
-      class="genreImage"
-      src="../../../assets/{{ book.genre.toLowerCase() }}.png"
-    />
-    <p>{{ book.genre }}</p>
-  </div>
-  <p>{{ book.publishing_year }}</p>
-  <div>
-    <label for="title">book title: </label>
-    <input id="title" [(ngModel)]="book.title" placeholder="title" />
-  </div>
-  <div>
-    <label for="author">book author: </label>
-    <input id="author" [(ngModel)]="book.author" placeholder="author" />
-  </div>
-  <div>
-    <label for="genre"> Book genre </label>
-    <select
-      id="genre"
-      required
-      class="input"
-      [(ngModel)]="book.genre"
-      placeholder="genre"
-    >
-      <option [ngValue]="book.genre">{{ book.genre }}</option>
-      <option value="fantasy">Fantasy</option>
-      <option value="history">History</option>
-      <option value="horror">Horror</option>
-      <option value="mystery">Mystery</option>
-      <option value="psychology">Psychology</option>
-      <option value="romance">Romance</option>
-    </select>
+
+  <div class="editBackWrapper">
+    <fa-icon size="2x" [icon]="editIcon" class="editButton" (click)="toggleEditBookForm()"></fa-icon>
+    <fa-icon size="2x" [icon]="exitIcon" class="exitButton" (click)="goBack()">
+    </fa-icon>
   </div>
 
-  <div>
-    <label for="publishing_year">book year: </label>
-    <input
-      id="publishing_year"
-      [(ngModel)]="book.publishing_year"
-      placeholder="publishing_year"
-    />
+  <div class="imageWrapper">
+    <img class="image" src="{{ book.image }}" />
   </div>
-  <button type="button" (click)="goBack()">go back</button>
-  <button type="button" (click)="save()">save</button>
+
+  <div class="textWrapper">
+    <h2 class="heading">{{ book.title }}</h2>
+    <p class="author">{{ book.author }}</p>
+    <p class="description">{{ book.description }}</p>
+
+    <div class="genreWrapper">
+      <img class="genreImage" src="../../../assets/{{ book.genre.toLowerCase() }}.png"/>
+      <p class="genreText">{{ book.genre }}</p>
+    </div>
+
+    <p class="publishingYear">Publishing year: {{ book.publishing_year }}</p>
+  </div>
+
+</div>
+
+
+
+
+<div class="formWrapper" *ngIf="showEditBookForm">
+
+  <div class="form">
+
+    <div class="inputWrapper">
+      <label for="title">Book title: </label>
+      <input class="input" id="title" [(ngModel)]="book.title" placeholder="title" />
+    </div>
+
+    <div class="inputWrapper">
+      <label for="author">Book author: </label>
+      <input class="input" id="author" [(ngModel)]="book.author" placeholder="author"/>
+    </div>
+
+    <div class="inputWrapper">
+      <label for="genre"> Book genre </label>
+      <select id="genre" required class="input" [(ngModel)]="book.genre" placeholder="genre">
+        <option [ngValue]="book.genre">{{ book.genre }}</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="History">History</option>
+        <option value="Horror">Horror</option>
+        <option value="Mystery">Mystery</option>
+        <option value="Psychology">Psychology</option>
+        <option value="Romance">Romance</option>
+      </select>
+    </div>
+
+    <div class="inputWrapper">
+      <label for="publishing_year">Book publishing year: </label>
+      <input class="input" id="publishing_year" [(ngModel)]="book.publishing_year" placeholder="publishing_year"/>
+    </div>
+    
+    <div class="buttonWrapper">
+      <app-button class="saveButton" [class]="buttonClass" text="Save" (btnClick)="save()" ></app-button>
+    </div>
+
+  </div>
 </div>

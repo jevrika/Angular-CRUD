@@ -5,7 +5,10 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class UiService {
+
   private showAddBookForm: boolean = false;
+  private showEditBookForm: boolean = false;
+  
   private subject = new Subject<any>();
 
   constructor() {}
@@ -13,6 +16,11 @@ export class UiService {
   toggleAddBookForm(): void {
     this.showAddBookForm = !this.showAddBookForm;
     this.subject.next(this.showAddBookForm);
+  }
+
+  toggleEditBookForm(): void {
+    this.showEditBookForm = !this.showEditBookForm;
+    this.subject.next(this.showEditBookForm);
   }
 
   onToggle(): Observable<any> {
